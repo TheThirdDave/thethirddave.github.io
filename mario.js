@@ -77,7 +77,7 @@ $(function() {
     event.preventDefault();
     var touch = event.originalEvent;
     console.log(touch.touches);
-    var current = document.elementfrompoint(touch.x, touch.y);
+    var current = document.elementFromPoint(touch.x, touch.y);
     $("#status").html(current.title);
     $("#grid").css( 'background', 'url("' + current.getAttribute("data-pic-file") + '")  no-repeat center center fixed' );
   });
