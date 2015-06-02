@@ -20,7 +20,7 @@ $(function(){
         $("#grid").css( 'background', 'url("action.png") no-repeat center center fixed');
         setTimeout(function() {
           if ($("#status").html() != "") {
-            $("#status").html(event.target.title)
+            $("#status").html(event.target.title);
             $("#grid").css( 'background', 'url("' + event.target.getAttribute("data-pic-file") + '")  no-repeat center center fixed' );
           }
         }, 500);
@@ -74,6 +74,7 @@ $(function(){
 
 $(function() {
   $("#grid").on('touchmove', function(event) {
+    event.preventDefault();
     var current = document.elementfrompoint(touch.x, touch.y);
     $("#status").html(current.title);
     $("#grid").css( 'background', 'url("' + current.getAttribute("data-pic-file") + '")  no-repeat center center fixed' );
