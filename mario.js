@@ -7,6 +7,8 @@ $(function(){
 
   $( "#grid" ).mousedown(function(event) {
 
+    console.log("" + event.target.getAttribute("data-pic-file"))
+
     if (first) {
       $("#status").html("" + event.target.title);
     }
@@ -14,9 +16,11 @@ $(function(){
 
     if(first == false) {
       $("#status").html("Action");
+      $("#grid").css( 'background', 'url("action.png") no-repeat center center fixed' );
       setTimeout(function() {
         if ($("#status").html() != "") {
           $("#status").html(event.target.title)
+          $("#grid").css( 'background', 'url("' + event.target.getAttribute("data-pic-file") + '")  no-repeat center center fixed' );
         }
       }, 500);
     }
@@ -25,30 +29,31 @@ $(function(){
     if(clicked ==true) {
       $("#box1").mouseenter(function(){
         $("#status").html("Jump Left");
+        $("#grid").css( 'background', 'url("jumpleft.png")  no-repeat center center fixed' );
       });
       $("#box2").mouseenter(function(){
         $("#status").html("Jump");
+        $("#grid").css( 'background', 'url("jump.png")  no-repeat center center fixed' );
       });
       $("#box3").mouseenter(function(){
         $("#status").html("Jump Right");
+        $("#grid").css( 'background', 'url("jumpright.png")  no-repeat center center fixed' );
       });
       $("#box4").mouseenter(function(){
        $("#status").html("Left");
+       $("#grid").css( 'background', 'url("backward.png")  no-repeat center center fixed' );
       });
       $("#box5").mouseenter(function(){
-          $("#status").html("");
+        $("#status").html("");
+        $("#grid").css( 'background', 'url("neutral.png")  no-repeat center center fixed' );
       });
       $("#box6").mouseenter(function(){
         $("#status").html("Right");
-      });
-      $("#box7").mouseenter(function(){
-        $("#status").html("Crouch Left");
+        $("#grid").css( 'background', 'url("forward.png")  no-repeat center center fixed' );
       });
       $("#box8").mouseenter(function(){
         $("#status").html("Crouch");
-      });
-      $("#box9").mouseenter(function(){
-        $("#status").html("Crouch Right");
+        $("#grid").css( 'background', 'url("down.png")  no-repeat center center fixed' );
       });
     }
   });
