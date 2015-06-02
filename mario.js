@@ -16,7 +16,7 @@ $(function(){
 
     if(first == false) {
       $("#status").html("Action");
-      $("#grid").css( 'background', 'url("action.png") no-repeat center center fixed' );
+      $("#grid").css( 'background', 'url("action.png") no-repeat center center fixed');
       setTimeout(function() {
         if ($("#status").html() != "") {
           $("#status").html(event.target.title)
@@ -40,7 +40,7 @@ $(function(){
         $("#grid").css( 'background', 'url("jumpright.png")  no-repeat center center fixed' );
       });
       $("#box4").mouseenter(function(){
-       $("#status").html("Left");
+       $("#status").html("Backward");
        $("#grid").css( 'background', 'url("backward.png")  no-repeat center center fixed' );
       });
       $("#box5").mouseenter(function(){
@@ -48,12 +48,20 @@ $(function(){
         $("#grid").css( 'background', 'url("neutral.png")  no-repeat center center fixed' );
       });
       $("#box6").mouseenter(function(){
-        $("#status").html("Right");
+        $("#status").html("Forward");
         $("#grid").css( 'background', 'url("forward.png")  no-repeat center center fixed' );
+      });
+      $("#box7").mouseenter(function(){
+        $("#status").html("");
+        $("#grid").css( 'background', 'url("neutral.png")  no-repeat center center fixed' );
       });
       $("#box8").mouseenter(function(){
         $("#status").html("Crouch");
         $("#grid").css( 'background', 'url("down.png")  no-repeat center center fixed' );
+      });
+      $("#box9").mouseenter(function(){
+        $("#status").html("");
+        $("#grid").css( 'background', 'url("neutral.png")  no-repeat center center fixed' );
       });
     }
   });
@@ -75,6 +83,7 @@ $(function() {
     $("#box8").off();
     $("#box9").off();
     $("#status").html("");
+    $( "#grid" ).css( 'background', 'url("neutral.png")  no-repeat center center fixed' );
     timeoutReference = setTimeout(function() {
       if(clicked==false) { 
         $( "#grid" ).css( 'background', 'url("pause.png")  no-repeat center center fixed' );
