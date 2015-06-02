@@ -5,7 +5,7 @@ var timeoutReference;
 
 $(function(){
 
-  $( "#grid" ).on('touchstart mousedown', (function(event) {
+  $( "#grid" ).on('touchstart mousedown', function(event) {
     event.stopPropagation();
     event.preventDefault();
     if (event.handled !== true) {
@@ -28,39 +28,39 @@ $(function(){
 
       clicked = true;
       if(clicked ==true) {
-        $("#box1").mouseenter(function(){
+        $("#box1").on('touchenter mouseenter', function(){
           $("#status").html("Jump Left");
           $("#grid").css( 'background', 'url("jumpleft.png")  no-repeat center center fixed' );
         });
-        $("#box2").mouseenter(function(){
+        $("#box2").on('touchenter mouseenter', function(){
           $("#status").html("Jump");
           $("#grid").css( 'background', 'url("jump.png")  no-repeat center center fixed' );
         });
-        $("#box3").mouseenter(function(){
+        $("#box3").on('touchenter mouseenter', function(){
           $("#status").html("Jump Right");
           $("#grid").css( 'background', 'url("jumpright.png")  no-repeat center center fixed' );
         });
-        $("#box4").mouseenter(function(){
+        $("#box4").on('touchenter mouseenter', function(){
          $("#status").html("Backward");
          $("#grid").css( 'background', 'url("backward.png")  no-repeat center center fixed' );
         });
-        $("#box5").mouseenter(function(){
+        $("#box5").on('touchenter mouseenter', function(){
           $("#status").html("");
           $("#grid").css( 'background', 'url("neutral.png")  no-repeat center center fixed' );
         });
-        $("#box6").mouseenter(function(){
+        $("#box6").on('touchenter mouseenter', function(){
           $("#status").html("Forward");
           $("#grid").css( 'background', 'url("forward.png")  no-repeat center center fixed' );
         });
-        $("#box7").mouseenter(function(){
+        $("#box7").on('touchenter mouseenter', function(){
           $("#status").html("");
           $("#grid").css( 'background', 'url("neutral.png")  no-repeat center center fixed' );
         });
-        $("#box8").mouseenter(function(){
+        $("#box8").on('touchenter mouseenter', function(){
           $("#status").html("Crouch");
           $("#grid").css( 'background', 'url("down.png")  no-repeat center center fixed' );
         });
-        $("#box9").mouseenter(function(){
+        $("#box9").on('touchenter mouseenter', function(){
           $("#status").html("");
           $("#grid").css( 'background', 'url("neutral.png")  no-repeat center center fixed' );
         });
@@ -74,7 +74,7 @@ $(function(){
 
 $(function() {
 
-  $("#grid").mouseup(function() {
+  $("#grid").on('touchend mouseup', function() {
     window.clearTimeout(timeoutReference);
     clicked=false;
     first=false;
