@@ -30,7 +30,7 @@ $(function(){
       if(clicked ==true) {
         $("#box1").on('touchenter mouseenter', function(){
           $("#status").html("Jump Left");
-          $("#grid").css( 'background', 'url("jumpleft.png")  no-repeat center center fixed' );
+          $("#grid").css( 'background', 'url("jumpleft.png")  no-repeat center center fixed');
         });
         $("#box2").on('touchenter mouseenter', function(){
           $("#status").html("Jump");
@@ -69,6 +69,14 @@ $(function(){
     } else {
       return false;
     }
+  });
+});
+
+$(function() {
+  $("#grid").on('touchmove', function(event) {
+    var current = document.elementfrompoint(touch.x, touch.y);
+    $("#status").html(current.title);
+    $("#grid").css( 'background', 'url("' + current.getAttribute("data-pic-file") + '")  no-repeat center center fixed' );
   });
 });
 
