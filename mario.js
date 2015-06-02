@@ -75,10 +75,10 @@ $(function(){
 $(function() {
   $("#grid").on('touchmove', function(event) {
     event.preventDefault();
-    var touch = event.originalEvent;
-    var current = document.elementFromPoint(touch.x, touch.y);
+    var touch = event.originalEvent.touches[0] || event.originalEvent.changedTouces[0];
+    var current = document.elementFromPoint(touch.pageX, touch.pageY);
     console.log(current.title);
-    console.log(touch.x + " " + touch.y);
+    console.log(touch.pageX + " " + touch.pageY);
     //$("#status").html(current.title);
     //$("#grid").css( 'background', 'url("' + current.getAttribute("data-pic-file") + '")  no-repeat center center fixed' );
   });
