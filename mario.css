@@ -1,0 +1,52 @@
+html {
+        height: 100%;
+         -moz-user-select: none; 
+        -khtml-user-select: none; 
+        -webkit-user-select: none; 
+        -o-user-select: none; width: 100%;
+
+        cursor: pointer;
+    }
+
+    #grid {
+        height: 100%;
+        width: 100%;
+         background: url("mariostill.jpg")  no-repeat center center fixed;
+           -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   -moz-user-select: none; 
+        -khtml-user-select: none; 
+        -webkit-user-select: none; 
+        -o-user-select: none; 
+    }
+    div {
+        outline: 1px solid orange;
+        width: 33%;
+        height: 33%;
+        float: left;
+         -moz-user-select: none; 
+        -khtml-user-select: none; 
+        -webkit-user-select: none; 
+        -o-user-select: none; 
+    }
+
+    div:hover{
+        background-color: gray;
+        opacity: .5;
+         -moz-user-select: none; 
+        -khtml-user-select: none; 
+        -webkit-user-select: none; 
+        -o-user-select: none; 
+    }
+
+    #status {
+        text-align: center;
+        font-family: Helvetica;
+        font-size: 20pt;
+         -moz-user-select: none; 
+        -khtml-user-select: none; 
+        -webkit-user-select: none; 
+        -o-user-select: none; 
+    }
