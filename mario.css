@@ -22,7 +22,7 @@ html {
         -o-user-select: none; 
     }
     .gridbox {
-      z-index: 500;
+      z-index: 9999;
     }
     div {
         outline: 1px solid orange;
