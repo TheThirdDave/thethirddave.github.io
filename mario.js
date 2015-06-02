@@ -79,8 +79,8 @@ $(function() {
     var current = document.elementFromPoint(touch.pageX, touch.pageY);
     console.log(current.title);
     console.log(touch.pageX + " " + touch.pageY);
-    //$("#status").html(current.title);
-    //$("#grid").css( 'background', 'url("' + current.getAttribute("data-pic-file") + '")  no-repeat center center fixed' );
+    $("#status").html(current.title);
+    $("#grid").css( 'background', 'url("' + current.getAttribute("data-pic-file") + '")  no-repeat center center fixed' );
   });
 });
 
